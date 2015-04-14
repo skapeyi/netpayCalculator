@@ -1,18 +1,46 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="Calculator">
 <head>
-    <title>Trium Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Net-Gross Pay Calculator</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
 </head>
         
 <body ng-controller="appController">
-    <input type="text" ng-model="GROSS" /> <input type="submit" name="submit" ng-click="Calculate()" value="Calculate" />
-    <p>Your Nssf Contribution is {{NSSFCONTRIBUTION}}</p>
-    <p>Your Employer's Contribution is {{EMPLOYERCONTRIBUTION}}</p>
-    <p>Your Total PAYE is {{PAYE}}</p>
-    <p>Your Total NSSF contribution is {{TOTALCONTRIBUTION}}</p>
-    <p>Your NetPay is {{NETPAY}}</p>
+    <nav class="navbar  navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Net/Gross Pay Calculator</a>
+            </div>            
+        </div><!-- /.container-fluid -->
+    </nav>
 
+    <div class="container" style="margin-top:30px">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Let's Calculate Your NetPay and Reveal all your deductions</h4>
+                <form id="gross" class="form-inline">
+                    <div class="form-group">
+                        <input class="form-control" type="number" ng-model="GROSS" />
+                        <button type="submit" class="btn btn-primary" ng-click="Calculate()">Calculate NetPay</button> 
+                    </div>
+                </form>
+                <p><label class="label label-warning">Your Nssf Contribution is {{NSSFCONTRIBUTION}}</label></p>
+                <p><label class="label label-warning">Your Employer's Contribution is {{EMPLOYERCONTRIBUTION}}</label><p/>                
+                <p><label class="label label-warning">Your Total NSSF contribution is {{TOTALCONTRIBUTION}}</label><p/>
+                <p><label class="label label-danger">Your Total PAYE is {{PAYE}}</label><p/>
+                <p><label class="label label-success">Your NetPay is {{NETPAY}}</label></p> 
+            </div>              
+        </div>
+    </div>
 
     <!--The necessary scripts-->
     <script src="js/angular.min.js"></script>

@@ -1,0 +1,11 @@
+/**
+* @author Samson Kapeyi, Email: kapeyisamson@gmail.com
+* This file is for bootstrap overrides!
+*/
+
+.label{
+	font-size: 16px;
+}
+#gross{
+	margin-bottom: 10px;
+}

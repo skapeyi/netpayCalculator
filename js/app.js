@@ -19,10 +19,10 @@ Calculator.controller('appController', function ($scope) {
         var EMPLOYEE_RATE = 0.05, EMPLOYER_RATE = 0.1;
         var employeeContribution = EMPLOYEE_RATE * gross;
         var employerContribution = EMPLOYER_RATE * gross;
-        var totalContribution = employeeContribution + employeeContribution;
+        var totalContribution = employeeContribution + employerContribution;
         values = [];
         values[0] = employeeContribution;
-        values[1] = employeeContribution;
+        values[1] = employerContribution;
         values[2] = totalContribution;
         return values;
     }
