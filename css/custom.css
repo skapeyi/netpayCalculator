@@ -9,3 +9,8 @@
 #gross{
 	margin-bottom: 10px;
 }
+
+span.cal-value {
+    color: #080808;
+    font-size: 18px;
+}
