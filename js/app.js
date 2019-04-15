@@ -38,7 +38,7 @@ Calculator.controller('appController', function ($scope) {
         else if (235000 <= gross && gross <= 335000) { PAYE = SECOND_TAX_BRACKET_RATE * gross; }
         else if (335000 <= gross && gross <= 410000) { PAYE = 10000 + THIRD_TAX_BRACKET_RATE * (gross - 335000); }
         else if (gross > 410000 && gross < 10000000) { PAYE = 25000 + FOURTH_TAX_BRACKET_RATE * (gross - 410000); }
-        else if (gross > 10000000) { PAYE = 25000 + (FOURTH_TAX_BRACKET_RATE * (gross - 410000)) + (OVER_TEN_MILLION * (gross - 10000000)); }
+        else if (gross >= 10000000) { PAYE = 25000 + (FOURTH_TAX_BRACKET_RATE * (gross - 410000)) + (OVER_TEN_MILLION * (gross - 10000000)); }
 
         return PAYE;
     }
